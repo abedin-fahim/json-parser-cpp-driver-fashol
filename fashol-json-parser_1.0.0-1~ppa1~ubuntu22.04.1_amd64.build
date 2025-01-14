@@ -1,0 +1,106 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package fashol-json-parser
+dpkg-buildpackage: info: source version 1.0.0-1~ppa1~ubuntu22.04.1
+dpkg-buildpackage: info: source distribution jammy
+dpkg-buildpackage: info: source changed by Fahim <fahim@fashol.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_auto_clean
+   dh_clean
+ dpkg-source -b .
+dpkg-source: warning: no source format specified in debian/source/format, see dpkg-source(1)
+dpkg-source: warning: Version number suggests Ubuntu changes, but Maintainer: does not have Ubuntu address
+dpkg-source: warning: Version number suggests Ubuntu changes, but there is no XSBC-Original-Maintainer field
+dpkg-source: warning: source directory 'json-parser-cpp' is not <sourcepackage>-<upstreamversion> 'fashol-json-parser-1.0.0'
+dpkg-source: warning: .orig directory name json-parser-cpp.orig is not <package>-<upstreamversion> (wanted fashol-json-parser-1.0.0.orig)
+dpkg-source: info: using source format '1.0'
+dpkg-source: info: building fashol-json-parser using existing fashol-json-parser_1.0.0.orig.tar.gz
+dpkg-source: info: building fashol-json-parser in fashol-json-parser_1.0.0-1~ppa1~ubuntu22.04.1.diff.gz
+dpkg-source: warning: executable mode 0775 of '.git/hooks/applypatch-msg.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/commit-msg.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/fsmonitor-watchman.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/post-update.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/pre-applypatch.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/pre-commit.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/pre-merge-commit.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/pre-push.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/pre-rebase.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/pre-receive.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/prepare-commit-msg.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/push-to-checkout.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/sendemail-validate.sample' will not be represented in diff
+dpkg-source: warning: executable mode 0775 of '.git/hooks/update.sample' will not be represented in diff
+dpkg-source: error: cannot represent change to .git/index: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/0a/b7293e04a975f813a6f93667e7df680aa777ba: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/0d/d9358e44087e796b4adb872dd65cfd6ffe9008: binary file contents changed
+dpkg-source: warning: file json-parser-cpp/.git/objects/13/e40f89ba974dbd809f32fa7c74ef54b9e1961a has no final newline (either original or modified version)
+dpkg-source: error: cannot represent change to .git/objects/15/2e8a9cfc6882a8463e62690fc17f44b6bff4a9: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/1f/610fe59607769eddd8d1e7ccdbbf1933c37dfd: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/22/5e0163b776023b58b57a0e393d6352a2281d85: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/26/6cd56c6ff9f65470a30a026939f13947936f3c: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/2b/4674cd7db998dab7b50ff6230457b0f3e4e4aa: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/2c/f1f8c9f1386388a29cb5bd827d9360816607b1: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/2f/7664336b3d47568dea9d48653a64eb2013cbfd: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/32/39d3e4f6bbeadad843f2bbe30a0e0c8634d7eb: binary file contents changed
+dpkg-source: warning: file json-parser-cpp/.git/objects/39/96978ecbd4a6098ef1244775ca52d116ca1ee3 has no final newline (either original or modified version)
+dpkg-source: warning: file json-parser-cpp/.git/objects/3c/4f05844a43368c98e5e4a7ae06efff5b4cfb65 has no final newline (either original or modified version)
+dpkg-source: error: cannot represent change to .git/objects/42/8a6c0b75695a194e5895b35fb64856d79869ea: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/50/5cb15bf859425f45e01203c8c3f492557078c2: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/55/74a3ea9768b935cc833f935a0a018349af0d4e: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/57/24fb8a81719e31a10d5d47bfd805d1d293dbc8: binary file contents changed
+dpkg-source: warning: file json-parser-cpp/.git/objects/5a/26426ce3f8c330fedc66af6b58728b2d035489 has no final newline (either original or modified version)
+dpkg-source: warning: file json-parser-cpp/.git/objects/5f/d64bea48ff18bcb29b3c36eb66062d3d2e3cf3 has no final newline (either original or modified version)
+dpkg-source: error: cannot represent change to .git/objects/63/24c9dc72ff2e2eeb21a38eb044ac2db68c91a2: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/65/2ea8aeca40c42cbda3a6f651acf0d56534348c: binary file contents changed
+dpkg-source: warning: file json-parser-cpp/.git/objects/65/b5217870f5ad0549441573daa48c07bbf1b8a5 has no final newline (either original or modified version)
+dpkg-source: error: cannot represent change to .git/objects/78/c7a47fc911a4d62e85b2873066e2d8d1a83b64: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/85/7b302e659bdedb07741630b02b9c911a1cacbd: binary file contents changed
+dpkg-source: warning: file json-parser-cpp/.git/objects/8b/e9350c06430bd4ba4f95c0a6f4655610b40708 has no final newline (either original or modified version)
+dpkg-source: warning: file json-parser-cpp/.git/objects/8d/c4a4ad801c24c689a0a9a5869fe0ab7746ecd8 has no final newline (either original or modified version)
+dpkg-source: error: cannot represent change to .git/objects/9e/61d23ef6ce3e6bb2cbf197d7bb64e77018160d: binary file contents changed
+dpkg-source: warning: file json-parser-cpp/.git/objects/a2/7d374a7c0cc6a148296c7eb8ea025e821f59a5 has no final newline (either original or modified version)
+dpkg-source: error: cannot represent change to .git/objects/c4/2b716165e0877ae4ccea39d34bec1282379452: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/ed/7f15207da90b49f044e44624fd63919b1190da: binary file contents changed
+dpkg-source: error: cannot represent change to .git/objects/fc/52417a4d8d01e56a75b1d1e1b896d1557994da: binary file contents changed
+dpkg-source: warning: the diff modifies the following upstream files: 
+ .git/COMMIT_EDITMSG
+ .git/FETCH_HEAD
+ .git/HEAD
+ .git/ORIG_HEAD
+ .git/config
+ .git/description
+ .git/hooks/applypatch-msg.sample
+ .git/hooks/commit-msg.sample
+ .git/hooks/fsmonitor-watchman.sample
+ .git/hooks/post-update.sample
+ .git/hooks/pre-applypatch.sample
+ .git/hooks/pre-commit.sample
+ .git/hooks/pre-merge-commit.sample
+ .git/hooks/pre-push.sample
+ .git/hooks/pre-rebase.sample
+ .git/hooks/pre-receive.sample
+ .git/hooks/prepare-commit-msg.sample
+ .git/hooks/push-to-checkout.sample
+ .git/hooks/sendemail-validate.sample
+ .git/hooks/update.sample
+ .git/info/exclude
+ .git/logs/HEAD
+ .git/logs/refs/heads/main
+ .git/logs/refs/remotes/origin/main
+ .git/objects/13/e40f89ba974dbd809f32fa7c74ef54b9e1961a
+ .git/objects/39/96978ecbd4a6098ef1244775ca52d116ca1ee3
+ .git/objects/3c/4f05844a43368c98e5e4a7ae06efff5b4cfb65
+ .git/objects/5a/26426ce3f8c330fedc66af6b58728b2d035489
+ .git/objects/5f/d64bea48ff18bcb29b3c36eb66062d3d2e3cf3
+ .git/objects/65/b5217870f5ad0549441573daa48c07bbf1b8a5
+ .git/objects/8b/e9350c06430bd4ba4f95c0a6f4655610b40708
+ .git/objects/8d/c4a4ad801c24c689a0a9a5869fe0ab7746ecd8
+ .git/objects/a2/7d374a7c0cc6a148296c7eb8ea025e821f59a5
+ .git/refs/heads/main
+ .git/refs/remotes/origin/main
+ .gitignore
+dpkg-source: info: use the '3.0 (quilt)' format to have separate and documented changes to upstream files, see dpkg-source(1)
+dpkg-source: error: unrepresentable changes to source
+dpkg-buildpackage: error: dpkg-source -b . subprocess returned exit status 1
