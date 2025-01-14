@@ -1,0 +1,12 @@
+Source: fashol-json-parser
+Section: utils
+Priority: optional
+Maintainer: Fahim <fahim@fashol.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.0
+Homepage: <insert your homepage here>
+
+Package: fashol-json-parser
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A custom driver for handling JSON files.

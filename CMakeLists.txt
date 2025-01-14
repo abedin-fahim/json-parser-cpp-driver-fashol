@@ -17,8 +17,8 @@ add_library(json_driver_lib SHARED
 )
 
 # Create executable
-add_executable(json-parser src/main.cpp)
-target_link_libraries(json-parser PRIVATE 
+add_executable(fashol-json-parser src/main.cpp)
+target_link_libraries(fashol-json-parser PRIVATE 
     json_driver_lib
     nlohmann_json::nlohmann_json
     OpenSSL::SSL
@@ -26,6 +26,6 @@ target_link_libraries(json-parser PRIVATE
 )
 
 # Installation rules
-install(TARGETS json-parser DESTINATION /usr/local/bin)
+install(TARGETS fashol-json-parser DESTINATION /usr/local/bin)
 install(TARGETS json_driver_lib DESTINATION /usr/local/lib)
 install(FILES include/encryption.h DESTINATION /usr/include/my-json-driver)
