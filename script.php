@@ -14,7 +14,7 @@ $jsonData = [
 
 // $jsonFile = 'input.json';
 $outputFile =  Date('Y-m-d') . '.json';
-$shouldEncrypt = false;
+$shouldEncrypt = true;
 $encryptionKey = "12345678901234567890123456789012";
 $shouldMinimize = true;
 
@@ -23,7 +23,7 @@ $jsonString = json_encode($jsonData, JSON_UNESCAPED_SLASHES);
 
 // Build the command with proper escaping and spacing
 $command = sprintf(
-    './main %s %s%s%s',
+    'json-parser %s %s%s%s',
     // escapeshellarg($jsonFile),
     escapeshellarg($jsonString),
     escapeshellarg($outputFile),
@@ -47,7 +47,7 @@ if ($return_var == 0) {
 // Add new function to check file status
 function checkFileStatus($filePath)
 {
-    $command = sprintf('./main --check %s', escapeshellarg($filePath));
+    $command = sprintf('json-parser --check %s', escapeshellarg($filePath));
     exec($command, $output, $return_var);
 
     if ($return_var == 0 && !empty($output)) {
