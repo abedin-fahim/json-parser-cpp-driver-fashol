@@ -12,7 +12,7 @@ $jsonData = [
     ]
 ];
 
-$jsonFile = 'input.json';
+// $jsonFile = 'input.json';
 $outputFile =  Date('Y-m-d') . '.json';
 $shouldEncrypt = false;
 $encryptionKey = "12345678901234567890123456789012";
@@ -24,7 +24,8 @@ $jsonString = json_encode($jsonData, JSON_UNESCAPED_SLASHES);
 // Build the command with proper escaping and spacing
 $command = sprintf(
     './main %s %s%s%s',
-    escapeshellarg($jsonFile),
+    // escapeshellarg($jsonFile),
+    escapeshellarg($jsonString),
     escapeshellarg($outputFile),
     $shouldMinimize ? ' --minimize' : '',
     $shouldEncrypt ? ' --encrypt ' . escapeshellarg($encryptionKey) : ''
@@ -32,7 +33,7 @@ $command = sprintf(
 
 // Execute command and capture output
 exec($command . ' 2>&1', $output, $return_var);
-echo($command);
+echo ($command);
 
 // Check if the execution was successful
 if ($return_var == 0) {
@@ -44,10 +45,11 @@ if ($return_var == 0) {
 }
 
 // Add new function to check file status
-function checkFileStatus($filePath) {
+function checkFileStatus($filePath)
+{
     $command = sprintf('./main --check %s', escapeshellarg($filePath));
     exec($command, $output, $return_var);
-    
+
     if ($return_var == 0 && !empty($output)) {
         return $output[0];
     }
@@ -62,4 +64,3 @@ echo "File status: " . $status . "\n";
 $time_end = microtime(true);
 $time = $time_end - $time_start;
 echo "Time taken: " . $time . " seconds\n";
-?>

@@ -2,11 +2,11 @@ Source: fashol-json-parser
 Section: utils
 Priority: optional
 Maintainer: Fahim <fahim@fashol.com>
-Build-Depends: debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 13), cmake, libssl-dev, libnlohmann-json-dev
 Standards-Version: 4.5.0
 Homepage: <insert your homepage here>
 
 Package: fashol-json-parser
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libssl1.1 | libssl3
 Description: A custom driver for handling JSON files.
